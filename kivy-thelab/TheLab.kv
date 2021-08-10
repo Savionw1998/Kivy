@@ -1,0 +1,48 @@
+PageLayoutExample:
+
+<PageLayoutExample@PageLayout>:
+    BoxLayoutExample:
+    GridLayoutExample:
+    StackLayoutExample:
+
+
+<ScrollViewExample@ScrollView>:
+    StackLayoutExample:
+        size_hint: 1, None
+        height: self.minimum_height
+
+<StackLayoutExample>:
+    # orientation: "rl-bt"
+
+<GridLayoutExample>:
+    rows: 2
+    Button:
+        text: "A"
+        size_hint: None, 1
+        width: "60dp"
+    BoxLayoutExample:
+    Button:
+        text: "C"
+    Button:
+        text: "D"
+    Button:
+        text: "E"
+    Button:
+        text: "F"
+
+<BoxLayoutExample>:
+    Button:
+        text: "C"
+        size_hint: .5, .5
+
+<MainWidget>:
+    Button:
+        text: "Hello"
+        size: "100dp", "80dp"
+        pos: "100dp", "200dp"
+        color: 0, 0, 1, 1
+    Label:
+        text: "Hello"
+        size: "100dp", "80dp"
+        pos: "200dp", "300dp"
+        color: 0, 0, 1, 1
