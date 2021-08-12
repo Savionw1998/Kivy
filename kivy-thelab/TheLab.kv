@@ -2,6 +2,9 @@ WidgetsExample:
 
 <WidgetsExample>:
     cols: 3
+    ToggleButton:
+        text: on_ state
+        on_state: root.on_toggle_state(self)
     Button:
         text: "Click Here"
         on_press: root.on_button_click()
@@ -9,6 +12,7 @@ WidgetsExample:
         text: root.my_text
         font_name: "fonts/playtime.ttf"
         font_size: "50dp"
+
 
 
 <PageLayoutExample@PageLayout>:
