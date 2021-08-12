@@ -24,7 +24,13 @@ WidgetsExample:
         min: 0
         max: 100
         value: 25
+        on_value: root.on_slider_value(self)
         orientation: "vertical"
+    Label:
+        text: root.my_slider_text
+        # font_name: "fonts/.ttf"
+        font_size: "20dp"
+
 
 
 
