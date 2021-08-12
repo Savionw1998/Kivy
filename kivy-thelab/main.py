@@ -18,8 +18,9 @@ class WidgetsExample(GridLayout):
     def on_toggle_state(self, widget):
         print("Toggle State!" + widget.state)
         if widget.state == "normal":
-
+            widget.text = "OFF"
         else:
+            widget.text = "ON"
 
 
 
