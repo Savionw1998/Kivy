@@ -16,21 +16,23 @@ WidgetsExample:
         font_name: "fonts/playtime.ttf"
         font_size: "50dp"
     Switch:
+        id: my_switch
         on_active: root.on_switch_active(self)
         text: "OFF"
         size_hint: None, 1
         width: "100dp"
     Slider:
+        id: my_slider
         min: 0
         max: 100
         value: 25
         on_value: root.on_slider_value(self)
         orientation: "vertical"
+        disabled: not my_switch.active
     Label:
         text: root.my_slider_text
         # font_name: "fonts/.ttf"
         font_size: "20dp"
-
 
 <PageLayoutExample@PageLayout>:
     BoxLayoutExample:
