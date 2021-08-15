@@ -12,7 +12,8 @@ class WidgetsExample(GridLayout):
     count = 1
     count_enabled = BooleanProperty(False)
     my_text = StringProperty("0")
-    my_slider_text = StringProperty("Value")
+    text_input_str = StringProperty("Foo")
+    # my_slider_text = StringProperty("Value")
 
     def on_button_click(self):
         print("Button Clicked!")
@@ -32,9 +33,12 @@ class WidgetsExample(GridLayout):
     def on_switch_active(self, widget):
         print("Switch:" + str(widget.active))
 
-    def on_slider_value(self, widget):
-        print("Slider Value!: " + str(int(widget.value)))
-        self.my_slider_text = str(int(widget.value))
+    # def on_slider_value(self, widget):
+        # print("Slider Value!: " + str(int(widget.value)))
+        # self.my_slider_text = str(int(widget.value))
+
+    def on_text_validate(self, widget):
+        self.text_input_str = widget.text
 
 
 class StackLayoutExample(StackLayout):
